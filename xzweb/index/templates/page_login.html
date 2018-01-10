@@ -117,13 +117,14 @@
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
             <input type="text" class="form-control" placeholder="用户名">
         </div>
+        
         <div class="input-group margin-bottom-20">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input type="text" class="form-control js-password-control" placeholder="密码">
-            <span class="input-group-addon js-password-btn"><i class="glyphicon glyphicon-eye-open"></i></span>
+            <input type="text" class="form-control" placeholder="密码" id='changePwd'>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open" id='changeText'></i></span>
         </div>
-        <hr>
-
+        <hr>       
+        </hr>
         <div class="checkbox">
             <label>
                 <input type="checkbox"> 
@@ -168,22 +169,25 @@
         duration: 7000
     });
 </script>
+<!--
+	作者：1416275614@qq.com
+	时间：2018-01-10
+	描述：密码输入框，密码与名为转化
+-->
 <script type="text/javascript">
-	$(document).ready(function(){
-	    var flag = 1;
-	
-	    $(".js-password-control").click(function(event) {
-	        if( flag === 1 ){
-	            $(".form-control").attr("type","text");
-	            flag = 0;
-	        }else{
-	            $(".js-password-btn").attr("type","password");
-	            flag = 1;
-	        }
-	    });
-	});
+    var obj = document.getElementById('changeText');
+    var psw = document.getElementById('changePwd');
+    psw.setAttribute('type','password')
+    
+    obj.onclick = function(){
+        if(psw.getAttribute('type') == 'text'){
+            psw.setAttribute('type','password')    
+        }else{
+            psw.setAttribute('type','text')    
+        }
+    
+    }
 </script>
-
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
     <script src="assets/plugins/html5shiv.js"></script>

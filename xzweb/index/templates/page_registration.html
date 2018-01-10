@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<!--增加公用静态文件夹common_static-->
+{% load staticfiles %}
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Registration 1 | Unify - Responsive Website Template</title>
+    <title>Registration | Happy_And_Lucky</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,29 +14,29 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="{% static 'assets\img\favicon.ico' %}">
 
     <!-- Web Fonts -->
-    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin' %}'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets/plugins/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/line-icons/line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}">
 
     <!-- CSS Page Style -->    
-    <link rel="stylesheet" href="assets/css/pages/page_log_reg_v2.css">    
+    <link rel="stylesheet" href="{% static 'assets/css/pages/page_log_reg_v2.css' %}">    
 
     <!-- CSS Theme -->    
-    <link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
-    <link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+    <link rel="stylesheet" href="{% static 'assets/css/theme-colors/default.css' %}" id="style_color">
+    <link rel="stylesheet" href="{% static 'assets/css/theme-skins/dark.css' %}">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
 </head> 
 
 <body>
@@ -147,17 +149,17 @@
 <!--=== End Content Part ===-->
 
 <!-- JS Global Compulsory -->           
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/jquery/jquery-migrate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script> 
 <!-- JS Implementing Plugins -->           
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/back-to-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/backstretch/jquery.backstretch.min.js' %}"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/custom.js"></script>
 <!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/app.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/plugins/style-switcher.js' %}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
@@ -166,8 +168,8 @@
 </script>
 <script type="text/javascript">
     $.backstretch([
-      "assets/img/bg/19.jpg",
-      "assets/img/bg/18.jpg",
+      "{% static 'assets/img/bg/19.jpg' %}",
+      "{% static 'assets/img/bg/18.jpg' %}",
       ], {
         fade: 1000,
         duration: 7000
