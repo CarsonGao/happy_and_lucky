@@ -5,7 +5,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Unify - Responsive Website Template</title>
+    <title>Happy_And_Lucky</title>
     {% load staticfiles %}
     <!-- Meta -->
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="{% static 'assets\img\favicon.ico' %}">
 
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
@@ -68,7 +68,6 @@
             <li class="theme-dark-red" data-style="dark-red" data-header="light"></li>
             <li class="theme-teal last" data-style="teal" data-header="light"></li>
         </ul>
-        <h1>我是个大傻瓜</h1>
         <!-- Theme Skins -->
         <div class="style-switcher-heading">Theme Skins</div>
         <div class="row no-col-space margin-bottom-20 skins-section">
@@ -137,7 +136,7 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="page_login.html">Login</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
