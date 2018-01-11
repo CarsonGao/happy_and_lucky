@@ -110,18 +110,18 @@
                 <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="page_login.html#"></a></li>
                 <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="page_login.html#"></a></li>
             </ul>
-            <p> <a class="color-green" href="{% url 'registration' %}">注册账号</a></p>            
+            <p>如果您还没有账号，请<a  href="{% url 'registration' %}" class="color-green" ><font color="#66CC33">-注册-</font></a>账号</p>            
         </div>
 
         <div class="input-group margin-bottom-20">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" placeholder="用户名">
+            <input type="text" class="form-control" id='UserName' placeholder="用户名">
         </div>
         
         <div class="input-group margin-bottom-20">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input type="text" class="form-control" placeholder="密码" id='changePwd'>
-            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open" id='changeText'></i></span>
+            <input type="text" class="form-control" placeholder="密码" id='PassWord'>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open" id='Text'></i></span>
         </div>
         <hr>       
         </hr>
@@ -137,6 +137,8 @@
                 <button type="submit" class="btn-u btn-block">登 录</button>
             </div>
         </div>
+ 		<br>
+		<p><a class="color-green" href="page_login.html#"><font color="#66CC33">找回密码</font></a></p>
     </div>
     <!--End Reg Block-->
 </div><!--/container-->
@@ -175,8 +177,8 @@
 	描述：密码输入框，密码与名为转化
 -->
 <script type="text/javascript">
-    var obj = document.getElementById('changeText');
-    var psw = document.getElementById('changePwd');
+    var obj = document.getElementById('Text');
+    var psw = document.getElementById('PassWord');
     psw.setAttribute('type','password')
     
     obj.onclick = function(){

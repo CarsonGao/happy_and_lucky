@@ -103,44 +103,44 @@
     <!--Reg Block-->
     <div class="reg-block">
         <div class="reg-block-header">
-            <h2>Sign Up</h2>
+            <h2>账号注册</h2>
             <ul class="social-icons text-center">
-                <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="page_registration1.html#"></a></li>
-                <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="page_registration1.html#"></a></li>
-                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="page_registration1.html#"></a></li>
-                <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="page_registration1.html#"></a></li>
+                <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="page_registration.html#"></a></li>
+                <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="page_registration.html#"></a></li>
+                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="page_registration.html#"></a></li>
+                <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="page_registration.html#"></a></li>
             </ul>
-            <p>Already Signed Up? Click <a class="color-green" href="page_login1.html">Sign In</a> to login your account.</p>
+            <p>如果您已经有账号了，请使用账号 <a class="color-green" href="{% url 'login' %}"><font color="#66CC33">登录</font></a>。</p>
         </div>
-
+		{% csrf_token %}
         <div class="input-group margin-bottom-20">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" placeholder="Username">
+            <input type="text" class="form-control" placeholder="用户名">
         </div>
         <div class="input-group margin-bottom-20">
             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <input type="text" class="form-control" placeholder="Email">
+            <input type="text" class="form-control" placeholder="邮箱">
         </div>
         <div class="input-group margin-bottom-20">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input type="text" class="form-control" placeholder="Password">
+            <input type="text" class="form-control" placeholder="输入密码">
         </div>
         <div class="input-group margin-bottom-30">
             <span class="input-group-addon"><i class="fa fa-key"></i></span>
-            <input type="text" class="form-control" placeholder="Confirm Password">
+            <input type="text" class="form-control" placeholder="确认密码">
         </div>
         <hr>
 
         <div class="checkbox">            
             <label>
-                <input type="checkbox"> 
-                I read <a target="_blank" href="page_terms.html">Terms and Conditions</a>
+                <input type="checkbox" checked="true"> 
+                	我已阅读并同意<a target="_blank" href="page_terms.html"><font color="#66CC33">相关服务条款和隐私政策</font><a>
             </label>
         </div>
                                 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <button type="submit" class="btn-u btn-block">Register</button>                
+                <button type="submit" class="btn-u btn-block">注册</button>                
             </div>
         </div>
     </div>
@@ -156,9 +156,9 @@
 <script type="text/javascript" src="{% static 'assets/plugins/back-to-top.js' %}"></script>
 <script type="text/javascript" src="{% static 'assets/plugins/backstretch/jquery.backstretch.min.js' %}"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="{% static 'assets/js/custom.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/custom.js' %}"></script>
 <!-- JS Page Level -->           
-<script type="text/javascript" src="{% static 'assets/js/app.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/app.js' %}"></script>
 <script type="text/javascript" src="{% static 'assets/js/plugins/style-switcher.js' %}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
