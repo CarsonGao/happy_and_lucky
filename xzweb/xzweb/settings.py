@@ -81,9 +81,19 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-
-# Password validation
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'xzweb',
+        'USER': 'root',
+        'PASSWORD': '000000',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
+'''
+#word validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

@@ -18,6 +18,8 @@ from django.contrib import admin
 from blog import views as blog_views
 from index import views as index_views
 
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index_views.index),
